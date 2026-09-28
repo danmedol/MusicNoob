@@ -1,9 +1,8 @@
-public class ArtistaSimilar
+using System.Text.Json.Serialization;
+
+public class SimilarArtist
 {
-    public string Nome{get; set;}
-    
-    public ArtistaSimilar(string nome)
-    {
-        Nome = nome;
-    }
+    [JsonPropertyName("name")]
+    public string Name{get; set;}
+
 }
