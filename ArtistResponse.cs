@@ -1,11 +1,7 @@
-public class Faixa
+using System.Text.Json.Serialization;
+
+public class ArtistResponse
 {
-    public string Nome{get; set;}
-    public int Plays{get; set;}
-    
-    public Faixa(string nome, int plays)
-    {
-        Nome = nome;
-        Plays = plays;
-    }
+    [JsonPropertyName("artist")]
+    public Artist? Artist{get; set;}
 }

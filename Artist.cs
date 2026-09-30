@@ -1,16 +1,17 @@
-public class Artista
-{
-    public string Nome{get; set;}
-    public string Bio{get; set;}
-    public int Ouvintes{get; set;}
-    public int Plays{get; set;}
+using System.Text.Json.Serialization;
 
-    public Artista(string nome, string bio, int ouvintes, int plays)
-    {
-        Nome = nome;
-        Bio = bio;
-        Ouvintes = ouvintes;
-        Plays = plays;
-    }
+public class Artist
+{
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    [JsonPropertyName("stats")]
+    public Stats? Stats { get; set; }
+
+    [JsonPropertyName("similar")]
+    public Similar? Similar { get; set; }
+
+    [JsonPropertyName("bio")]
+    public Bio? Bio { get; set; }
 
 }
